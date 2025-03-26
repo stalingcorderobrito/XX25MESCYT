@@ -3,11 +3,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}       % Idioma español
 \usepackage{geometry}             % Márgenes ajustables
-\usepackage{hyperref}             % Hipervínculos
+%\usepackage{hyperref}             % Hipervínculos
 \usepackage{enumitem}             % Listas personalizadas
 \usepackage{url}                  % Manejo de URLs
 \usepackage{lmodern}              % Fuente vectorial
 \usepackage{natbib}               % Gestión de citas bibliográficas
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=green]{hyperref}
+\definecolor{SCBCOLOR}{RGB}{50,110,30}
+\definecolor{SCBGREEN}{RGB}{18,34,17}
+\usepackage{svg}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{float}
 
 \geometry{margin=1in}
 
@@ -16,6 +24,26 @@
 \date{}
 
 \begin{document}
+
+\begin{titlepage}
+    \centering
+    % Ajusta el espacio superior según necesites
+   % \vspace*{1cm}
+    
+    % Logo en la parte superior
+    \includegraphics[width=\textwidth, height=\textwidth]{/Users/stalingcordero/Library/CloudStorage/GoogleDrive-scordero48@uasd.edu.do/Mi unidad/MESCyT/Viceministerio de CyT/Dirección de investigación/XXCIC25_visualcode/color.png} \\
+    \vspace{2cm} % Espacio entre el logo y el texto
+    
+    % Bloque de texto centrado debajo del logo
+    {\Huge \textbf{XX Congreso de Investigación Científica 2025} \par}
+    \vspace{1cm}
+    {\LARGE \textbf{Ministerio de Educación Superior, Ciencia y Tecnología} \par}
+    \vspace{0.5cm}
+    {\Large \textbf{Viceministerio de Ciencia y Tecnología} \par}
+    
+    \vfill  % Empuja el contenido para que quede centrado verticalmente respecto al espacio restante
+\end{titlepage}
+
 
 \maketitle
 \tableofcontents
@@ -31,7 +59,7 @@
 
 \noindent \textbf{Abstract:} \\
 
-Tal y como destacan los Objetivos del Desarrollo Sostenible (ODS) y una creciente literatura científica la equidad educativa surge, junto a la eficacia escolar, como uno de los pilares clave para alcanzar una educación de calidad. Una educación equitativa y de calidad implica que el sistema educativo sea capaz de paliar o minimizar las brechas socioeconómicas y demográficas existentes, de modo que la escolarización contribuya al progreso de todas las personas y al adecuado funcionamiento del ascensor social. En este sentido, evaluaciones educativas a gran escala como las pruebas PISA nos ayudan a realizar un diagnóstico certero de los niveles de equidad y eficacia de los sistemas educativos nacionales y de su evolución a lo largo del tiempo. Es por eso que en los últimos 5 años está creciendo el interés científico sobre la evaluación de la equidad educativa, y es previsible que en los próximos años crezca aún más.Teniendo en cuenta la literatura actual en este ámbito, y la experiencia acumulada gracias a mi coordinación del Proyecto EVIDENCE, en esta conferencia se abordarán las siguientes cuestiones fundamentales:Conceptualización de la equidad educativa y sus dimensiones fundamentales: segregación, igualdad de resultados e igualdad de oportunidades.Técnicas estadísticas innovadoras y emergentes para la medida de la equidad educativa: indicadores para la medida de la segregación, para la medida de la igualdad de resultados y para la medida de la igualdad de oportunidades.Estudio de los indicadores de equidad en la educación secundaria de la República Dominicana en los años 2015, 2018 y 2022 (años en los que el país ha participado en las evaluaciones PISA): análisis en relación a los países de la región, de su evolución, y de los efectos del COVID-19.
+\cite{cordero2020gamification} Tal y como destacan los Objetivos del Desarrollo Sostenible (ODS) y una creciente literatura científica la equidad educativa surge, junto a la eficacia escolar, como uno de los pilares clave para alcanzar una educación de calidad. Una educación equitativa y de calidad implica que el sistema educativo sea capaz de paliar o minimizar las brechas socioeconómicas y demográficas existentes, de modo que la escolarización contribuya al progreso de todas las personas y al adecuado funcionamiento del ascensor social. En este sentido, evaluaciones educativas a gran escala como las pruebas PISA nos ayudan a realizar un diagnóstico certero de los niveles de equidad y eficacia de los sistemas educativos nacionales y de su evolución a lo largo del tiempo. Es por eso que en los últimos 5 años está creciendo el interés científico sobre la evaluación de la equidad educativa, y es previsible que en los próximos años crezca aún más.Teniendo en cuenta la literatura actual en este ámbito, y la experiencia acumulada gracias a mi coordinación del Proyecto EVIDENCE, en esta conferencia se abordarán las siguientes cuestiones fundamentales:Conceptualización de la equidad educativa y sus dimensiones fundamentales: segregación, igualdad de resultados e igualdad de oportunidades.Técnicas estadísticas innovadoras y emergentes para la medida de la equidad educativa: indicadores para la medida de la segregación, para la medida de la igualdad de resultados y para la medida de la igualdad de oportunidades.Estudio de los indicadores de equidad en la educación secundaria de la República Dominicana en los años 2015, 2018 y 2022 (años en los que el país ha participado en las evaluaciones PISA): análisis en relación a los países de la región, de su evolución, y de los efectos del COVID-19.
 
 
 
@@ -185,7 +213,10 @@ La gestión sostenible de residuos es un desafío ambiental crucial. Con el incr
 \end{itemize}
 
 \newpage
-\bibliographystyle{plain}
-\bibliography{bibliografia}
+
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{apalike}% estilo de la bibliografía.
+\bibliography{biblio} % yyyy.bib es el fichero donde está salvada la bibliografía.
+
 
 \end{document}
